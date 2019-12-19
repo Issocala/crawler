@@ -1,7 +1,7 @@
 package cn.cyzone.service;
 import cn.cyzone.entity.*;
 import cn.cyzone.util.CrawlerUtil;
-import cn.cyzone.util.DataBaseUtil;
+import cn.cyzone.dao.DataBaseUtil;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;

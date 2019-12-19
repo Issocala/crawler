@@ -1,4 +1,4 @@
-package cn.cyzone.util;
+package cn.cyzone.dao;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.mysql.fabric.xmlrpc.base.Param;

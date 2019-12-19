@@ -1,7 +1,7 @@
 package cn.cyzone.service;
 
 import cn.cyzone.util.CrawlerUtil;
-import cn.cyzone.util.DataBaseUtil;
+import cn.cyzone.dao.DataBaseUtil;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -63,4 +63,7 @@ public class GetCyzoneCompanyAll {
         }
         executors.shutdown();
     }
+//    public void getUtil(T t){
+//
+//    }
 }

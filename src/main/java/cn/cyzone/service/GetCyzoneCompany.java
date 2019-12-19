@@ -5,10 +5,9 @@ import cn.cyzone.entity.Entrepreneur;
 import cn.cyzone.entity.EntrepreneurToCompany;
 import cn.cyzone.entity.Finance;
 import cn.cyzone.util.CrawlerUtil;
-import cn.cyzone.util.DataBaseUtil;
+import cn.cyzone.dao.DataBaseUtil;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.text.ParseException;
