@@ -1,16 +1,16 @@
-import cn.cyzone.service.GetCyzoneInvestmentCompany;
+import cn.cyzone.service.impl.GetCyzoneInvestmentCompanyImpl;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class GetCyzoneInvestmentCompanyTest {
-    GetCyzoneInvestmentCompany getCyzoneInvestmentCompany = new GetCyzoneInvestmentCompany();
-    Logger logger = LoggerFactory.getLogger(GetCyzoneInvestmentCompanyTest.class);
+public class GetCyzoneInvestmentCompanyImplTest {
+    GetCyzoneInvestmentCompanyImpl getCyzoneInvestmentCompanyImpl = new GetCyzoneInvestmentCompanyImpl();
+    Logger logger = LoggerFactory.getLogger(GetCyzoneInvestmentCompanyImplTest.class);
     @Test
     public void getInvestmentCompanyTest(){
         logger.debug("..........开始测试");
         String url = "http://www.cyzone.cn/capital/list-0-1-3/";
-        getCyzoneInvestmentCompany.getInvestmentCompany(url);
+        getCyzoneInvestmentCompanyImpl.getInvestmentCompany(url);
         logger.debug("..........测试完成");
     }
 
@@ -18,7 +18,7 @@ public class GetCyzoneInvestmentCompanyTest {
     public void getInvestorTest(){
         logger.debug("..........开始测试");
         String url = "http://www.cyzone.cn/capital/1393213.html";
-        getCyzoneInvestmentCompany.getInvestor(url);
+        getCyzoneInvestmentCompanyImpl.getInvestor(url);
         logger.debug("..........测试完成");
 
     }
@@ -26,7 +26,7 @@ public class GetCyzoneInvestmentCompanyTest {
     public void getOrganizeTest(){
         logger.debug("..........开始测试");
         String url = "http://www.cyzone.cn/capital/1393213.html";
-        getCyzoneInvestmentCompany.getOrganize(url);
+        getCyzoneInvestmentCompanyImpl.getOrganize(url);
         logger.debug("..........测试完成");
     }
 
@@ -34,7 +34,7 @@ public class GetCyzoneInvestmentCompanyTest {
     public void getInvestmentResultTest(){
         logger.debug("..........开始测试");
         String url = "http://www.cyzone.cn/capital/1393213.html";
-        getCyzoneInvestmentCompany.getInvestmentResult(url);
+        getCyzoneInvestmentCompanyImpl.getInvestmentResult(url);
         logger.debug("..........测试完成");
     }
 }

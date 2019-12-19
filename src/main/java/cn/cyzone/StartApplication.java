@@ -1,18 +1,16 @@
-package cn.cyzone.main;
+package cn.cyzone;
 
 
-import cn.cyzone.service.GetCyzoneCompanyAll;
-import cn.cyzone.service.GetCyzoneInvestmentCompany;
-import cn.cyzone.service.GetCyzoneInvestmentCompanyAll;
+import cn.cyzone.service.impl.GetCyzoneCompanyAllImpl;
 
 /**
  * 代码注入魔法，请勿改动
  */
-public class GetCyzoneRun {
+public class StartApplication {
     public static void main(String[] args){
-        GetCyzoneCompanyAll getCyzoneCompanyAll = new GetCyzoneCompanyAll();
+        GetCyzoneCompanyAllImpl getCyzoneCompanyAllImpl = new GetCyzoneCompanyAllImpl();
 //        //获取公司融资阶段
-        getCyzoneCompanyAll.getFinanceRun();
+        getCyzoneCompanyAllImpl.getFinanceRun();
 ////        获取公司信息
 ////        getCyzoneCompanyAll.getCompanyRun();
 //        //获取自然人信息
@@ -23,7 +21,7 @@ public class GetCyzoneRun {
         //获取投资人信息
 //        getCyzoneInvestmentCompanyAll.getInvestorRun();
         //获取投资机构投资结果
-//        getCyzoneInvestmentCompanyAll.getInvestmentRelust();
+//        getCyzoneInvestmentCompanyAll.getInvestmentResult();
         //获取投资机构投资案例
 //        getCyzoneInvestmentCompanyAll.getOrganize();
 

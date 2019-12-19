@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67396bcd-7668-4307-997c-10200450464b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/dao/PoolSizeCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/dao/SimplePoolSizeCaculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneCompany.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneCompanyAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneCompanyAll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompanyAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompanyAll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/util/DataBaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/dao/DataBaseUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/dao/CompanyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/dao/CompanyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/main/GetCyzoneRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/StartApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneCompanyImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneCompanyAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneCompanyAllImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneInvestmentCompanyImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompanyAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneInvestmentCompanyAllImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/util/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GetCyzoneCompanyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetCyzoneCompanyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GetCyzoneInvestmentCompanyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetCyzoneInvestmentCompanyImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestGetCyzoneCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestGetCyzoneCompany.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -82,13 +84,13 @@
       <recent name="$PROJECT_DIR$/src/main/java/cn/cyzone/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GetCyzoneRun">
-    <configuration name="GetCyzoneRun" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.cyzone.main.GetCyzoneRun" />
+  <component name="RunManager" selected="Application.StartApplication">
+    <configuration name="SimplePoolSizeCaculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.cyzone.dao.SimplePoolSizeCaculator" />
       <module name="crawler" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.cyzone.service.*" />
+          <option name="PATTERN" value="cn.cyzone.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,12 +98,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimplePoolSizeCaculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.cyzone.dao.SimplePoolSizeCaculator" />
+    <configuration name="StartApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.cyzone.StartApplication" />
       <module name="crawler" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.cyzone.dao.*" />
+          <option name="PATTERN" value="cn.cyzone.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,20 +121,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetCyzoneInvestmentCompanyTest.getInvestmentResultTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GetCyzoneInvestmentCompanyImplTest.getInvestmentResultTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="crawler" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GetCyzoneInvestmentCompanyTest" />
+      <option name="MAIN_CLASS_NAME" value="GetCyzoneInvestmentCompanyImplTest" />
       <option name="METHOD_NAME" value="getInvestmentResultTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetCyzoneInvestmentCompanyTest.getOrganizeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GetCyzoneInvestmentCompanyImplTest.getOrganizeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="crawler" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GetCyzoneInvestmentCompanyTest" />
+      <option name="MAIN_CLASS_NAME" value="GetCyzoneInvestmentCompanyImplTest" />
       <option name="METHOD_NAME" value="getOrganizeTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -141,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GetCyzoneRun" />
+        <item itemvalue="Application.StartApplication" />
         <item itemvalue="JUnit.GetCyzoneCompanyTest.getFinance" />
         <item itemvalue="Application.SimplePoolSizeCaculator" />
-        <item itemvalue="JUnit.GetCyzoneInvestmentCompanyTest.getInvestmentResultTest" />
-        <item itemvalue="JUnit.GetCyzoneInvestmentCompanyTest.getOrganizeTest" />
+        <item itemvalue="JUnit.GetCyzoneInvestmentCompanyImplTest.getInvestmentResultTest" />
+        <item itemvalue="JUnit.GetCyzoneInvestmentCompanyImplTest.getOrganizeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +193,7 @@
       <workItem from="1575890832571" duration="3696000" />
       <workItem from="1575977826034" duration="2003000" />
       <workItem from="1576562182499" duration="1218000" />
-      <workItem from="1576655199809" duration="10335000" />
+      <workItem from="1576655199809" duration="11525000" />
     </task>
     <task id="LOCAL-00001" summary="爬取某网站信息">
       <created>1576734778898</created>
@@ -207,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576734814548</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="项目优化">
+      <created>1576742564184</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576742564184</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +224,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="爬取某网站信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="爬取某网站信息" />
+    <MESSAGE value="项目优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目优化" />
   </component>
   <component name="WindowStateProjectService">
     <state x="555" y="214" width="800" height="677" key="#Console" timestamp="1575276447176">
@@ -226,14 +236,16 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2475" y="214" width="800" height="677" key="#Scopes/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576564881498" />
-    <state x="768" y="236" width="564" height="632" key="#com.intellij.ide.util.MemberChooser" timestamp="1575530424380">
+    <state x="768" y="236" width="564" height="632" key="#com.intellij.ide.util.MemberChooser" timestamp="1576743655161">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="768" y="236" width="564" height="632" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575530424380" />
-    <state x="465" y="27" width="970" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575525784628">
+    <state x="768" y="236" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576743655161" />
+    <state x="465" y="27" width="1014" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1576742982779">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="465" y="27" width="970" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575525784628" />
+    <state x="465" y="27" width="1014" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576742982779" />
     <state x="693" y="299" width="524" height="507" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1575094474925">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -242,10 +254,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="903" y="387" width="762" height="610" key="#xdebugger.evaluate/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575117868716" />
-    <state x="521" y="121" width="867" height="835" key="CommitChangelistDialog2" timestamp="1576734814499">
+    <state x="521" y="121" width="867" height="835" key="CommitChangelistDialog2" timestamp="1576742564080">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="521" y="121" width="867" height="835" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576734814499" />
+    <state x="521" y="121" width="867" height="835" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576742564080" />
     <state width="529" height="466" key="DebuggerActiveHint" timestamp="1575117817804">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -311,10 +323,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="441" y="187" width="1024" height="845" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575112099416" />
-    <state x="555" y="259" width="800" height="559" key="Vcs.Push.Dialog.v2" timestamp="1576734993655">
+    <state x="555" y="259" width="800" height="559" key="Vcs.Push.Dialog.v2" timestamp="1576742573800">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="555" y="259" width="800" height="559" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576734993655" />
+    <state x="555" y="259" width="800" height="559" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576742573800" />
     <state x="442" y="163" width="1006" height="751" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576734960734">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -380,94 +392,19 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneInvestmentCompanyImpl.java</url>
           <line>22</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneInvestmentCompanyImpl.java</url>
           <line>41</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneInvestmentCompanyImpl.java</url>
           <line>32</line>
           <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>122</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>131</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>118</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>116</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>202</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>197</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>322</line>
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/GetCyzoneInvestmentCompany.java</url>
-          <line>318</line>
-          <option name="timeStamp" value="75" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

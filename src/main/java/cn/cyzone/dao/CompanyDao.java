@@ -1,5 +1,5 @@
 package cn.cyzone.dao;
 
-public class CompanyDao {
+public class CompanyDao extends DataBaseUtil{
 
 }

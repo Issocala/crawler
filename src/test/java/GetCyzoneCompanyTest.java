@@ -1,4 +1,4 @@
-import cn.cyzone.service.GetCyzoneCompany;
+import cn.cyzone.service.impl.GetCyzoneCompanyImpl;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,13 +7,13 @@ import org.slf4j.LoggerFactory;
 
 public class GetCyzoneCompanyTest {
     Logger logger = LoggerFactory.getLogger(GetCyzoneCompanyTest.class);
-    GetCyzoneCompany getCyzoneCompany = new GetCyzoneCompany();
+    GetCyzoneCompanyImpl getCyzoneCompanyImpl = new GetCyzoneCompanyImpl();
     @Test
     public void getEntrepreneur(){
-        getCyzoneCompany.getEntrepreneur("http://www.cyzone.cn/company/1513586.html");
+        getCyzoneCompanyImpl.getEntrepreneur("http://www.cyzone.cn/company/1513586.html");
     }
     @Test
     public void getFinance(){
-        getCyzoneCompany.getFinance("http://www.cyzone.cn/company/1321846.html");
+        getCyzoneCompanyImpl.getFinance("http://www.cyzone.cn/company/1321846.html");
     }
 }
