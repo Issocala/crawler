@@ -29,42 +29,25 @@ public class GetCyzoneCompanyImpl implements GetCyzoneCompany {
         StringBuffer stringBuffer = new StringBuffer();
         Document doc = CrawlerUtil.getDocument(url);
         //通过class获取主网站上公司信息条
-        Elements elementsCompany = doc.getElementsByClass("table-company-tit");
+        Elements elementsCompany = doc.select("tr.table-plate.item");
         if(elementsCompany != null){
             elementsCompany.forEach(ec-> {
                 Company company = new Company();
+                Elements elementsCompany2 = ec.select("td.table-company-tit");
                 //获取、写入公司名称
-                company.setCompanyName(ec.text());
-                Elements href = ec.select("a");
+                company.setCompanyName(elementsCompany2.text());
+                Elements href = elementsCompany2.select("a");
                 //获取、写入公司详细页url
                 String href1 = "http://www.cyzone.cn" + href.attr("href");
                 boolean flag = redisService.sismember("company",href1);
                 if(!flag){
+                    Elements elements = ec.select("td.table-type");
+                    //获取、写入公司简单描述
+                    company.setCompanyInfo(elements.get(0).text());
+                    //获取、写入公司服务类型
+                    company.setCompanyServerType(elements.get(1).text());
                     company.setCompanyUrl(href1);
                     arrayList.add(company);
-                }
-            });
-            //获取描述信息和服务行业两个class一样，下面做了处理
-            Elements elements = doc.getElementsByClass("table-type");
-            final int[] i = {0};
-            elements.forEach(es->{
-                int yushu = i[0] % 2;
-                int index = i[0] / 2;
-                if(yushu == 0){
-                    //获取、写入公司简单描述
-                    Company company = arrayList.get(index);
-                    company.setCompanyInfo(es.text());
-                }
-                //获取、写入公司服务类型
-                Company company = arrayList.get(index);
-                company.setCompanyServerType(es.text());
-                i[0]++;
-            });
-            //获取下一个网页的url
-            Elements elementsNextUrlA = doc.select("#pages").select("a");
-            elementsNextUrlA.forEach(enua->{
-                if(enua.text().equals("下一页")){
-                    stringBuffer.append("http://www.cyzone.cn" + enua.attr("href"));
                 }
             });
             //进入公司详细页获取更多信息
@@ -112,8 +95,8 @@ public class GetCyzoneCompanyImpl implements GetCyzoneCompany {
                     "company_finance,company_server_type,company_url,company_official_website,company_location," +
                     "company_picture,company_create_date) values(?,?,?,?,?,?,?,?,?,?,?)";
             if(arrayList.size() > 0){
-                int flag =dataBaseUtil.addNewsAll(sql,arrayList);
-                if(flag != -1){
+                int result =dataBaseUtil.addNewsAll(sql,arrayList);
+                if(result != -1){
                     arrayList.forEach(a->{
                         redisService.sadd("company",a.getCompanyUrl());
                     });
@@ -158,8 +141,8 @@ public class GetCyzoneCompanyImpl implements GetCyzoneCompany {
                 String sqlEntrepreneurToCompany = "insert into cyzone_entrepreneur_to_company(entrepreneur_to_company_entrepreneur_url," +
                         "entrepreneur_to_company_company_url) values(?,?)";
                 if(entrepreneur.getEntrepreneurName() != null && !entrepreneur.getEntrepreneurName().trim().equals("")){
-                    int flag =dataBaseUtilE.addOne(sqlEntrepreneur,entrepreneur);
-                    if(flag != -1){
+                    int result =dataBaseUtilE.addOne(sqlEntrepreneur,entrepreneur);
+                    if(result != -1){
                         redisService.sadd("entrepreneur",entrepreneur.getEntrepreneurUrl());
                     }
                     dataBaseUtilETC.addOne(sqlEntrepreneurToCompany,entrepreneurToCompany);
@@ -304,8 +287,8 @@ public class GetCyzoneCompanyImpl implements GetCyzoneCompany {
                     "company_finance,company_server_type,company_url,company_official_website,company_location," +
                     "company_picture,company_create_date) values(?,?,?,?,?,?,?,?,?,?,?)";
             for(Company company : arrayList){
-                int flag = dataBaseUtil.addOne(sql,company);
-                if(flag != -1){
+                int result = dataBaseUtil.addOne(sql,company);
+                if(result != -1){
                     redisService.sadd("company",company.getCompanyUrl());
                 }
             }

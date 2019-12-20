@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67396bcd-7668-4307-997c-10200450464b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/redis/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/redis/RedisPoolFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/redis/RedisService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/cyzone/redis/TestRedisService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/StartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/MainApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/dao/DataBaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/dao/DataBaseUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneCompanyAllImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneCompanyAllImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneCompanyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneCompanyImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/GetCyzoneCompanyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GetCyzoneCompanyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneInvestmentCompanyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneInvestmentCompanyImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +198,7 @@
       <workItem from="1575977826034" duration="2003000" />
       <workItem from="1576562182499" duration="1218000" />
       <workItem from="1576655199809" duration="11984000" />
-      <workItem from="1576745562587" duration="20932000" />
+      <workItem from="1576745562587" duration="22794000" />
     </task>
     <task id="LOCAL-00001" summary="爬取某网站信息">
       <created>1576734778898</created>
@@ -248,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576830637436</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="自己封装redis，暂时使用set做url去重">
+      <created>1576838799383</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576838799383</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +260,8 @@
     <MESSAGE value="项目优化" />
     <MESSAGE value="项目结构优化" />
     <MESSAGE value="增加redis，暂时使用set做url去重" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加redis，暂时使用set做url去重" />
+    <MESSAGE value="自己封装redis，暂时使用set做url去重" />
+    <option name="LAST_COMMIT_MESSAGE" value="自己封装redis，暂时使用set做url去重" />
   </component>
   <component name="WindowStateProjectService">
     <state x="555" y="214" width="800" height="677" key="#Console" timestamp="1575276447176">
@@ -288,10 +290,11 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="903" y="387" width="762" height="610" key="#xdebugger.evaluate/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575117868716" />
-    <state x="521" y="121" width="867" height="835" key="CommitChangelistDialog2" timestamp="1576830637337">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="2441" y="96" width="867" height="835" key="CommitChangelistDialog2" timestamp="1576840695613">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="521" y="121" width="867" height="835" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576830637337" />
+    <state x="2441" y="96" width="867" height="835" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576840695613" />
     <state width="529" height="466" key="DebuggerActiveHint" timestamp="1575117817804">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -370,10 +373,11 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="441" y="187" width="1024" height="845" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575112099416" />
-    <state x="555" y="259" width="800" height="559" key="Vcs.Push.Dialog.v2" timestamp="1576802258065">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="2475" y="238" width="800" height="559" key="Vcs.Push.Dialog.v2" timestamp="1576838806069">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="555" y="259" width="800" height="559" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576802258065" />
+    <state x="2475" y="238" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576838806069" />
     <state x="442" y="163" width="1006" height="751" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576734960734">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -383,12 +387,12 @@
     </state>
     <state x="237" y="86" width="1436" height="906" key="new project wizard/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575963306063" />
     <state x="2157" y="61" key="new project wizard/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576562479844" />
-    <state x="2544" y="231" width="672" height="698" key="run.anything.popup" timestamp="1576829555904">
+    <state x="2544" y="231" width="672" height="698" key="run.anything.popup" timestamp="1576840096380">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="624" y="252" width="672" height="680" key="run.anything.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575539076284" />
     <state x="624" y="252" width="672" height="681" key="run.anything.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576741381891" />
-    <state x="2544" y="231" width="672" height="698" key="run.anything.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576829555904" />
+    <state x="2544" y="231" width="672" height="698" key="run.anything.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576840096380" />
     <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1576741472398">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -405,7 +409,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneCompanyImpl.java</url>
-          <line>240</line>
+          <line>223</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>

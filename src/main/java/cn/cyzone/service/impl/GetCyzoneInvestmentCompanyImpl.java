@@ -1,5 +1,6 @@
 package cn.cyzone.service.impl;
 import cn.cyzone.entity.*;
+import cn.cyzone.redis.RedisService;
 import cn.cyzone.service.GetCyzoneInvestmentCompany;
 import cn.cyzone.util.CrawlerUtil;
 import cn.cyzone.dao.DataBaseUtil;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class GetCyzoneInvestmentCompanyImpl implements GetCyzoneInvestmentCompany {
-
+RedisService redisService = new RedisService();
     /**
      * 获取创投机构首页url，爬取当前页15个机构的基本信息，主要获取每个机构所在url
      * @param url 输入创投机构首页url
@@ -31,6 +32,10 @@ public class GetCyzoneInvestmentCompanyImpl implements GetCyzoneInvestmentCompan
                     //获取插入机构所在url
                     String investmentCompanyUrl = "http://cyzone.cn" + e2.select("a").attr("href");
                     investmentCompany.setInvestmentCompanyUrl(investmentCompanyUrl);
+                    boolean flag = redisService.sismember("investment",investmentCompanyUrl);
+                    if(flag){
+                        return;
+                    }
                     //获取插入机构图标所在url
                     investmentCompany.setInvestmentCompanyPicture(e2.select("a").select("img").attr("src"));
                 }else if(i == 2){
@@ -71,7 +76,12 @@ public class GetCyzoneInvestmentCompanyImpl implements GetCyzoneInvestmentCompan
                 "investment_company_create_date) values(?,?,?,?,?,?,?,?,?)";
         if(arrayList.size() > 0){
             DataBaseUtil dataBaseUtil = new DataBaseUtil();
-            dataBaseUtil.addNewsAll(sql,arrayList);
+            int result = dataBaseUtil.addNewsAll(sql,arrayList);
+            if(result != -1){
+                arrayList.forEach(a->{
+                    redisService.sadd("investment",a.getInvestmentCompanyUrl());
+                });
+            }
         }
     }
 
@@ -91,6 +101,10 @@ public class GetCyzoneInvestmentCompanyImpl implements GetCyzoneInvestmentCompan
             Elements eImg = e1.select("div.team-img");
             //投资人所在url
             String investorUrl = "http://cyzone.cn" + eImg.select("a").attr("href");
+            boolean flag = redisService.sismember("investor",investorUrl);
+            if(flag){
+                return;
+            }
             investor.setInvestorUrl(investorUrl);
             investmentCompanyToInvestor.setInvestmentCompanyToInvestorInvestorUrl(investorUrl);
             //投资人所在公司名称
@@ -152,7 +166,8 @@ public class GetCyzoneInvestmentCompanyImpl implements GetCyzoneInvestmentCompan
                     "investor_direction,investor_finance_name,investor_once_investment,investor_location," +
                     "investor_picture,investor_url,investor_investment_company_name) values(?,?,?,?,?,?,?,?,?,?)";
             int result = dataBaseUtil.addOne(investorSql,investor);
-            if(result == 1){
+            if(result != -1){
+                redisService.sadd("investor",investorUrl);
                 String investmentCompanyToInvestorSql = "insert into cyzone_investment_company_to_investor(" +
                         "investment_company_to_investor_company_url,investment_company_to_investor_investor_url) values(?,?)";
                 dataBaseUtil.addOne(investmentCompanyToInvestorSql,investmentCompanyToInvestor);
