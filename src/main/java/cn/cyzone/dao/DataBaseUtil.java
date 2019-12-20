@@ -1,5 +1,6 @@
 package cn.cyzone.dao;
 
+import cn.cyzone.redis.RedisService;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.mysql.fabric.xmlrpc.base.Param;
 import java.lang.reflect.Field;
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class DataBaseUtil<t> {
+    RedisService redisService = new RedisService();
 
     private ResultSetMetaData metaData;
     public static String jdbcDriver = "com.mysql.jdbc.Driver";
@@ -311,7 +313,6 @@ public class DataBaseUtil<t> {
                     } catch (SQLException ex) {
                         ex.printStackTrace();
                     }
-
                 }
             });
             // 执行增删改操作
@@ -398,64 +399,4 @@ public class DataBaseUtil<t> {
             }
         }
     }
-
-
-    /**
-     * 获取map数据
-     */
-//    public Map<order, t="">> getOrderDetailList(String sql, Class<t> clazz, Object... param) {
-//        Map<order, t="">> map = new HashMap<>();
-//        try {
-//            connection = DBManager.getConnection();
-//            ps = connection.prepareStatement(sql);
-//            for (int i = 0; i < param.length; i++) {
-//                ps.setObject(i + 1, param[i]);
-//            }
-//            rs = ps.executeQuery();
-//            // 得到ResultSetMetaData对象，这个对象包括列的信息(列的名称和类型等等)
-//            metaData = rs.getMetaData();
-//            // 得到结果集中列的个数
-//            int columnCount = metaData.getColumnCount();
-//            while (rs.next()) {
-//                Order order = new Order();
-//                order.setId(rs.getInt("id"));
-//                order.setO_orderdate(rs.getDate("o_orderdate"));
-//                T ins = clazz.newInstance();
-//                for (int i = 1; i <= columnCount; i++) {
-//                    // 得到列名
-//                    String name = metaData.getColumnName(i);
-//                    Object value = rs.getObject(i);
-//                    try {
-//                        Field field = clazz.getDeclaredField(name);
-//                        field.setAccessible(true);
-//                        // user.setUsername(name)
-//                        field.set(ins, value);
-//                    } catch (NoSuchFieldException e) {
-//                        System.out.println(name+"此字段不存在！");
-//                    } catch (IllegalArgumentException e) {
-//                        System.out.println(name+"此字段类型不匹配");
-//                    }
-//
-//                }
-//                List<t> list = map.get(order);
-//                if(list==null){
-//                    list = new ArrayList<>();
-//                }
-//                //把订单详情对象添加到集合中
-//                list.add(ins);
-//                map.put(order, list);
-//            }
-//        } catch (IllegalArgumentException e) {
-//            e.printStackTrace();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } catch (InstantiationException e) {
-//            e.printStackTrace();
-//        } catch (IllegalAccessException e) {
-//            e.printStackTrace();
-//        } finally {
-//            DBManager.closeAll(rs, ps, connection);
-//        }
-//        return map;
-//    }
 }

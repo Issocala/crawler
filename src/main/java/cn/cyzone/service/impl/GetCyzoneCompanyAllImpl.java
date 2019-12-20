@@ -1,5 +1,6 @@
 package cn.cyzone.service.impl;
 
+import cn.cyzone.redis.RedisService;
 import cn.cyzone.service.GetCyzoneCompanyAll;
 import cn.cyzone.util.CrawlerUtil;
 import cn.cyzone.dao.DataBaseUtil;
@@ -10,6 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class GetCyzoneCompanyAllImpl implements GetCyzoneCompanyAll {
+    RedisService redisService = new RedisService();
     /**
      * 执行此方法自动爬取创投全部信息
      */
@@ -25,7 +27,7 @@ public class GetCyzoneCompanyAllImpl implements GetCyzoneCompanyAll {
         for(int i = 0; i < list.size(); i++){
             int finalI = i;
             executors.execute((Runnable)()->{
-                getCyzoneCompanyImpl.getDataCompanyDo(list.get(finalI));
+                getCyzoneCompanyImpl.getDataCompanyOneDo(list.get(finalI));
             });
         }
         executors.shutdown();
@@ -42,7 +44,11 @@ public class GetCyzoneCompanyAllImpl implements GetCyzoneCompanyAll {
         for(int i = 0; i < list.size(); i++){
             int finalI = i;
             executors.execute((Runnable)()->{
-                getCyzoneCompanyImpl.getEntrepreneur(list.get(finalI));
+                String url = list.get(finalI);
+                boolean flag = redisService.sismember("entrepreneur",url);
+                if(!flag){
+                    getCyzoneCompanyImpl.getEntrepreneur(url);
+                }
             });
         }
         executors.shutdown();
