@@ -1,0 +1,4 @@
+logging:
+  level:
+    #        tk.mybatis: DEBUG
+    ROOT: ERROR
