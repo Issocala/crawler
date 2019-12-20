@@ -3,12 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="67396bcd-7668-4307-997c-10200450464b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/StartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/StartApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/dao/DataBaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/dao/DataBaseUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneCompanyAllImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneCompanyAllImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneCompanyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneCompanyImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneInvestmentCompanyAllImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/cyzone/service/impl/GetCyzoneInvestmentCompanyAllImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GetCyzoneCompanyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetCyzoneCompanyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/cyzone/dao/AsyncIOTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/cyzone/dao/CompanyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/cyzone/dao/CompanyDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/cyzone/dao/PoolSizeCalculator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/cyzone/dao/PoolSizeCalculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/cyzone/dao/SimplePoolSizeCaculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/cyzone/main/GetCyzoneRun.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/cyzone/service/GetCyzoneCompany.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/cyzone/service/GetCyzoneCompany.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/cyzone/service/GetCyzoneCompanyAll.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/cyzone/service/GetCyzoneCompanyAll.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/cyzone/service/GetCyzoneInvestmentCompany.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/cyzone/service/GetCyzoneInvestmentCompany.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/cyzone/service/GetCyzoneInvestmentCompanyAll.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/cyzone/service/GetCyzoneInvestmentCompanyAll.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/cyzone/util/DataBaseUtil$Druid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/cyzone/util/DataBaseUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/cyzone/util/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GetCyzoneCompanyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GetCyzoneCompanyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GetCyzoneInvestmentCompanyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestGetCyzoneCompany.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestGetCyzoneCompany.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -66,7 +78,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/cn/cyzone/redis" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,10 +92,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/cn/cyzone/redis" />
       <recent name="$PROJECT_DIR$/src/main/java/cn/cyzone/test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GetCyzoneCompanyTest.getCompanyOneDo">
+  <component name="RunManager" selected="JUnit.TestRedisService.testSadd">
     <configuration name="SimplePoolSizeCaculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.cyzone.dao.SimplePoolSizeCaculator" />
       <module name="crawler" />
@@ -130,11 +143,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetCyzoneInvestmentCompanyImplTest.getInvestmentResultTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRedisService.testSadd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="crawler" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GetCyzoneInvestmentCompanyImplTest" />
-      <option name="METHOD_NAME" value="getInvestmentResultTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.cyzone.redis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.cyzone.redis" />
+      <option name="MAIN_CLASS_NAME" value="cn.cyzone.redis.TestRedisService" />
+      <option name="METHOD_NAME" value="testSadd" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestRedisService.testSadd" />
         <item itemvalue="JUnit.GetCyzoneCompanyTest.getCompanyOneDo" />
         <item itemvalue="Application.StartApplication" />
         <item itemvalue="JUnit.GetCyzoneCompanyTest.getFinance" />
         <item itemvalue="Application.SimplePoolSizeCaculator" />
-        <item itemvalue="JUnit.GetCyzoneInvestmentCompanyImplTest.getInvestmentResultTest" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +212,7 @@
       <workItem from="1575977826034" duration="2003000" />
       <workItem from="1576562182499" duration="1218000" />
       <workItem from="1576655199809" duration="11984000" />
-      <workItem from="1576745562587" duration="4500000" />
+      <workItem from="1576745562587" duration="14740000" />
     </task>
     <task id="LOCAL-00001" summary="爬取某网站信息">
       <created>1576734778898</created>
@@ -223,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576743767149</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="项目结构优化">
+      <created>1576802247730</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576802247730</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,19 +288,20 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="903" y="387" width="762" height="610" key="#xdebugger.evaluate/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575117868716" />
-    <state x="521" y="121" width="867" height="835" key="CommitChangelistDialog2" timestamp="1576743767056">
+    <state x="521" y="121" width="867" height="835" key="CommitChangelistDialog2" timestamp="1576802247638">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="521" y="121" width="867" height="835" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576743767056" />
+    <state x="521" y="121" width="867" height="835" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576802247638" />
     <state width="529" height="466" key="DebuggerActiveHint" timestamp="1575117817804">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="529" height="466" key="DebuggerActiveHint/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575117817804" />
-    <state x="742" y="310" width="453" height="518" key="FileChooserDialogImpl" timestamp="1576734651577">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="2662" y="290" width="453" height="518" key="FileChooserDialogImpl" timestamp="1576823865750">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="742" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575094169388" />
     <state x="742" y="310" width="453" height="518" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576734651577" />
+    <state x="2662" y="290" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576823865750" />
     <state x="2667" y="441" key="Github.CreateGistDialog" timestamp="1576659705045">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -283,58 +310,62 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="815" y="399" key="Github.ShareDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576734608875" />
-    <state width="1866" height="279" key="GridCell.Tab.0.bottom" timestamp="1576734806331">
+    <state width="1866" height="502" key="GridCell.Tab.0.bottom" timestamp="1576830389954">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1866" height="333" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1576212535259" />
     <state width="1866" height="533" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1575873705066" />
-    <state width="1866" height="279" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576734806331" />
+    <state width="1866" height="502" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576830389954" />
     <state width="1866" height="659" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576660556121" />
-    <state width="1866" height="279" key="GridCell.Tab.0.center" timestamp="1576734806331">
+    <state width="1866" height="502" key="GridCell.Tab.0.center" timestamp="1576830389954">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1866" height="333" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1576212535259" />
     <state width="1866" height="533" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1575873705066" />
-    <state width="1866" height="279" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576734806331" />
+    <state width="1866" height="502" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576830389954" />
     <state width="1866" height="659" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576660556121" />
-    <state width="1866" height="279" key="GridCell.Tab.0.left" timestamp="1576734806331">
+    <state width="1866" height="502" key="GridCell.Tab.0.left" timestamp="1576830389954">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1866" height="333" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1576212535259" />
     <state width="1866" height="533" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1575873705065" />
-    <state width="1866" height="279" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576734806331" />
+    <state width="1866" height="502" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576830389954" />
     <state width="1866" height="659" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576660556121" />
-    <state width="1866" height="279" key="GridCell.Tab.0.right" timestamp="1576734806331">
+    <state width="1866" height="502" key="GridCell.Tab.0.right" timestamp="1576830389954">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1866" height="333" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1576212535259" />
     <state width="1866" height="533" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1575873705066" />
-    <state width="1866" height="279" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576734806331" />
+    <state width="1866" height="502" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576830389954" />
     <state width="1866" height="659" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576660556121" />
-    <state width="1866" height="304" key="GridCell.Tab.1.bottom" timestamp="1575963308437">
+    <state width="1866" height="502" key="GridCell.Tab.1.bottom" timestamp="1576830389867">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1866" height="304" key="GridCell.Tab.1.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575963308437" />
-    <state width="1866" height="304" key="GridCell.Tab.1.center" timestamp="1575963308437">
+    <state width="1866" height="502" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576830389867" />
+    <state width="1866" height="502" key="GridCell.Tab.1.center" timestamp="1576830389867">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1866" height="304" key="GridCell.Tab.1.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575963308437" />
-    <state width="1866" height="304" key="GridCell.Tab.1.left" timestamp="1575963308437">
+    <state width="1866" height="502" key="GridCell.Tab.1.center/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576830389867" />
+    <state width="1866" height="502" key="GridCell.Tab.1.left" timestamp="1576830389867">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1866" height="304" key="GridCell.Tab.1.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575963308437" />
-    <state width="1866" height="304" key="GridCell.Tab.1.right" timestamp="1575963308437">
+    <state width="1866" height="502" key="GridCell.Tab.1.left/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576830389867" />
+    <state width="1866" height="502" key="GridCell.Tab.1.right" timestamp="1576830389867">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1866" height="304" key="GridCell.Tab.1.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575963308437" />
+    <state width="1866" height="502" key="GridCell.Tab.1.right/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576830389867" />
     <state x="441" y="187" width="1024" height="845" key="SettingsEditor" timestamp="1575112099416">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="441" y="187" width="1024" height="845" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575112099416" />
-    <state x="555" y="259" width="800" height="559" key="Vcs.Push.Dialog.v2" timestamp="1576742573800">
+    <state x="555" y="259" width="800" height="559" key="Vcs.Push.Dialog.v2" timestamp="1576802258065">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="555" y="259" width="800" height="559" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576742573800" />
+    <state x="555" y="259" width="800" height="559" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576802258065" />
     <state x="442" y="163" width="1006" height="751" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576734960734">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -344,12 +375,12 @@
     </state>
     <state x="237" y="86" width="1436" height="906" key="new project wizard/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575963306063" />
     <state x="2157" y="61" key="new project wizard/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576562479844" />
-    <state x="624" y="252" width="672" height="681" key="run.anything.popup" timestamp="1576741381891">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="2544" y="231" width="672" height="698" key="run.anything.popup" timestamp="1576829555904">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="624" y="252" width="672" height="680" key="run.anything.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575539076284" />
     <state x="624" y="252" width="672" height="681" key="run.anything.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1576741381891" />
-    <state x="2544" y="231" width="672" height="698" key="run.anything.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576659014411" />
+    <state x="2544" y="231" width="672" height="698" key="run.anything.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1576829555904" />
     <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1576741472398">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
