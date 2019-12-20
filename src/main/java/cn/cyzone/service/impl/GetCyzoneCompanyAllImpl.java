@@ -21,7 +21,7 @@ public class GetCyzoneCompanyAllImpl implements GetCyzoneCompanyAll {
         for(int i = 1; i < total; i++){
             list.add("http://www.cyzone.cn/company/list-0-0-0-1-" + i +"/0");
         }
-        ExecutorService executors = Executors.newFixedThreadPool(16);
+        ExecutorService executors = Executors.newFixedThreadPool(8);
         for(int i = 0; i < list.size(); i++){
             int finalI = i;
             executors.execute((Runnable)()->{
@@ -38,7 +38,7 @@ public class GetCyzoneCompanyAllImpl implements GetCyzoneCompanyAll {
         GetCyzoneCompanyImpl getCyzoneCompanyImpl = new GetCyzoneCompanyImpl();
         DataBaseUtil dataBaseUtil = new DataBaseUtil();
         List<String> list = dataBaseUtil.getCompanyUrlAll("select company_url from cyzone_company");
-        ExecutorService executors = Executors.newFixedThreadPool(16);
+        ExecutorService executors = Executors.newFixedThreadPool(8);
         for(int i = 0; i < list.size(); i++){
             int finalI = i;
             executors.execute((Runnable)()->{
@@ -55,7 +55,7 @@ public class GetCyzoneCompanyAllImpl implements GetCyzoneCompanyAll {
         GetCyzoneCompanyImpl getCyzoneCompanyImpl = new GetCyzoneCompanyImpl();
         DataBaseUtil dataBaseUtil = new DataBaseUtil();
         List<String> list = dataBaseUtil.getCompanyUrlAll("select company_url from cyzone_company");
-        ExecutorService executors = Executors.newFixedThreadPool(16);
+        ExecutorService executors = Executors.newFixedThreadPool(8);
         for(int i = 0; i < list.size(); i++){
             int finalI = i;
             executors.execute((Runnable)()->{

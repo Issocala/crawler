@@ -214,4 +214,102 @@ public class GetCyzoneCompanyImpl implements GetCyzoneCompany {
             }
         }
     }
+
+    /***
+     * 输入url爬取相应的公司基本数据,单个输入数据库
+     * @param url　创业公司首页地址
+     * @return
+     */
+    public String getDataCompanyOneDo(String url) {
+        DataBaseUtil<Company> dataBaseUtil = new DataBaseUtil();
+        ArrayList<Company> arrayList = new ArrayList<>();
+        StringBuffer stringBuffer = new StringBuffer();
+        Document doc = CrawlerUtil.getDocument(url);
+        //通过class获取主网站上公司信息条
+        Elements elementsCompany = doc.getElementsByClass("table-company-tit");
+        if(elementsCompany != null){
+            elementsCompany.forEach(ec-> {
+                Company company = new Company();
+                //获取、写入公司名称
+                company.setCompanyName(ec.text());
+                Elements href = ec.select("a");
+                //获取、写入公司详细页url
+                String href1 = "http://www.cyzone.cn" + href.attr("href");
+                company.setCompanyUrl(href1);
+                arrayList.add(company);
+            });
+            //获取描述信息和服务行业两个class一样，下面做了处理
+            Elements elements = doc.getElementsByClass("table-type");
+            final int[] i = {0};
+            elements.forEach(es->{
+                int yushu = i[0] % 2;
+                int index = i[0] / 2;
+                if(yushu == 0){
+                    //获取、写入公司简单描述
+                    Company company = arrayList.get(index);
+                    company.setCompanyInfo(es.text());
+                }
+                //获取、写入公司服务类型
+                Company company = arrayList.get(index);
+                company.setCompanyServerType(es.text());
+                i[0]++;
+            });
+            //获取下一个网页的url
+            Elements elementsNextUrlA = doc.select("#pages").select("a");
+            elementsNextUrlA.forEach(enua->{
+                if(enua.text().equals("下一页")){
+                    stringBuffer.append("http://www.cyzone.cn" + enua.attr("href"));
+                }
+            });
+            //进入公司详细页获取更多信息
+            for(int j = 0; j < arrayList.size(); j++){
+                Company company = arrayList.get(j);
+                Document docUrl = CrawlerUtil.getDocument(company.getCompanyUrl());
+                //获取、写入公司全称
+                String fullName = docUrl.select("li.time").text();
+                if(fullName != null && fullName.length() > 5){
+                    fullName = fullName.substring(5);
+                }
+                company.setCompanyFullName(fullName);
+                //获取、写入公司图标
+                company.setCompanyPicture(docUrl.select("div.tl-img-bar").select("img").attr("src"));
+                Elements element = docUrl.select("div.info-tag.clearfix").select("li");
+                element.forEach(e->{
+                    String elements1 = e.select("i").attr("class");
+                    if(elements1.equals("i1")){
+                        try {
+                            //获取公司创建时间
+                            String date = e.select("span").text();
+
+                            if(date != null && !date.equals("不明确") && !date.equals("至今") && !date.equals("不清楚")){
+                                company.setCompanyCreateDate(new SimpleDateFormat("yyyy-MM-dd").parse(date));
+                            }
+                        } catch (ParseException ex) {
+                            ex.printStackTrace();
+                        }
+                    }else if(elements1.equals("i2")){
+                        //获取公司地址
+                        company.setCompanyLocation(e.select("span").text());
+                    }else {
+                        //获取工资融资情况
+                        company.setCompanyFinance(e.select("span").text());
+                    }
+                });
+                //获取、写入公司简介
+                company.setCompanyDetails(docUrl.select("div.info-box").text());
+                //获取、写入公司官网url
+                company.setCompanyOfficialWebsite(docUrl.select("div.com-url").select("a").text());
+            }
+
+            //插入公司表数据库
+            String sql = "insert into cyzone_company(company_name,company_full_name,company_info,company_details," +
+                    "company_finance,company_server_type,company_url,company_official_website,company_location," +
+                    "company_picture,company_create_date) values(?,?,?,?,?,?,?,?,?,?,?)";
+            for(Company company : arrayList){
+                dataBaseUtil.addOne(sql,company);
+            }
+            return stringBuffer.toString();
+        }
+        return null;
+    }
 }

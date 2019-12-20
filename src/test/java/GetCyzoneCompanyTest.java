@@ -16,4 +16,8 @@ public class GetCyzoneCompanyTest {
     public void getFinance(){
         getCyzoneCompanyImpl.getFinance("http://www.cyzone.cn/company/1321846.html");
     }
+    @Test
+    public void getCompanyOneDo(){
+        getCyzoneCompanyImpl.getDataCompanyOneDo("http://data.cyzone.cn/company/list-0-0-0-1-1/0");
+    }
 }

@@ -13,7 +13,7 @@ public class DataBaseUtil<t> {
 
     private ResultSetMetaData metaData;
     public static String jdbcDriver = "com.mysql.jdbc.Driver";
-    public static String jdbcUrl = "jdbc:mysql://localhost:3306/cyzone3?characterEncoding=utf-8&useSSL=false";
+    public static String jdbcUrl = "jdbc:mysql://localhost:3306/cyzone?characterEncoding=utf-8&useSSL=false";
     public static String username = "root";
     public static String password = "123456";
 

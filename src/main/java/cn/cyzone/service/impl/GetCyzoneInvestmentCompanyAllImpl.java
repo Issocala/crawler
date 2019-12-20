@@ -20,7 +20,7 @@ public class GetCyzoneInvestmentCompanyAllImpl implements GetCyzoneInvestmentCom
         for(int i = 1; i < total; i++){
             list.add("http://www.cyzone.cn/capital/list-0-" + i +"-3/");
         }
-        ExecutorService executors = Executors.newFixedThreadPool(16);
+        ExecutorService executors = Executors.newFixedThreadPool(8);
         for(int i = 0; i < list.size(); i++){
             int finalI = i;
             executors.execute((Runnable)()->{
@@ -36,7 +36,7 @@ public class GetCyzoneInvestmentCompanyAllImpl implements GetCyzoneInvestmentCom
     public void getInvestorRun(){
         DataBaseUtil dataBaseUtil = new DataBaseUtil();
         List<String> list = dataBaseUtil.getCompanyUrlAll("select investment_company_url from cyzone_investment_company");
-        ExecutorService executors = Executors.newFixedThreadPool(16);
+        ExecutorService executors = Executors.newFixedThreadPool(8);
         for(int i = 0; i < list.size(); i++){
             int finalI = i;
             executors.execute((Runnable)()->{
@@ -52,7 +52,7 @@ public class GetCyzoneInvestmentCompanyAllImpl implements GetCyzoneInvestmentCom
     public void getInvestmentResult(){
         DataBaseUtil dataBaseUtil = new DataBaseUtil();
         List<String> list = dataBaseUtil.getCompanyUrlAll("select investment_company_url from cyzone_investment_company");
-        ExecutorService executors = Executors.newFixedThreadPool(16);
+        ExecutorService executors = Executors.newFixedThreadPool(8);
         for(int i = 0; i < list.size(); i++){
             int finalI = i;
             executors.execute((Runnable)()->{
@@ -68,7 +68,7 @@ public class GetCyzoneInvestmentCompanyAllImpl implements GetCyzoneInvestmentCom
     public void getOrganize(){
         DataBaseUtil dataBaseUtil = new DataBaseUtil();
         List<String> list = dataBaseUtil.getCompanyUrlAll("select investment_company_url from cyzone_investment_company");
-        ExecutorService executors = Executors.newFixedThreadPool(16);
+        ExecutorService executors = Executors.newFixedThreadPool(8);
         for(int i = 0; i < list.size(); i++){
             int finalI = i;
             executors.execute((Runnable)()->{
