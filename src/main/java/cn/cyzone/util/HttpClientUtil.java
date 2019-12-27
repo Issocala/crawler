@@ -41,15 +41,6 @@ public class HttpClientUtil {
     private final static Object syncLock = new Object();
 
     private static void config(HttpRequestBase httpRequestBase) {
-        // 设置Header等
-        // httpRequestBase.setHeader("User-Agent", "Mozilla/5.0");
-        // httpRequestBase
-        // .setHeader("Accept",
-        // "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
-        // httpRequestBase.setHeader("Accept-Language",
-        // "zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3");// "en-US,en;q=0.5");
-        // httpRequestBase.setHeader("Accept-Charset",
-        // "ISO-8859-1,utf-8,gbk,gb2312;q=0.7,*;q=0.7");
 
         // 配置请求的超时设置
         RequestConfig requestConfig = RequestConfig.custom()
@@ -108,7 +99,7 @@ public class HttpClientUtil {
         HttpRequestRetryHandler httpRequestRetryHandler = new HttpRequestRetryHandler() {
             public boolean retryRequest(IOException exception,
                                         int executionCount, HttpContext context) {
-                if (executionCount >= 5) {// 如果已经重试了5次，就放弃
+                if (executionCount >= 10) {// 如果已经重试了10次，就放弃
                     return false;
                 }
                 if (exception instanceof NoHttpResponseException) {// 如果服务器丢掉了连接，那么就重试
@@ -146,52 +137,6 @@ public class HttpClientUtil {
                 .setRetryHandler(httpRequestRetryHandler).build();
 
         return httpClient;
-    }
-
-    private static void setPostParams(HttpPost httpost,
-                                      Map<String, Object> params) {
-        List<NameValuePair> nvps = new ArrayList<NameValuePair>();
-        Set<String> keySet = params.keySet();
-        for (String key : keySet) {
-            nvps.add(new BasicNameValuePair(key, params.get(key).toString()));
-        }
-        try {
-            httpost.setEntity(new UrlEncodedFormEntity(nvps, "UTF-8"));
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * GET请求URL获取内容
-     *
-     * @param url
-     * @return
-     * @throws Exception
-     */
-    public static String post(String url, Map<String, Object> params) throws Exception {
-        HttpPost httppost = new HttpPost(url);
-        config(httppost);
-        setPostParams(httppost, params);
-        CloseableHttpResponse response = null;
-        try {
-            response = getHttpClient(url).execute(httppost,
-                    HttpClientContext.create());
-            HttpEntity entity = response.getEntity();
-            String result = EntityUtils.toString(entity, "utf-8");
-            EntityUtils.consume(entity);
-            return result;
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw e;
-        } finally {
-            try {
-                if (response != null)
-                    response.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     /**
